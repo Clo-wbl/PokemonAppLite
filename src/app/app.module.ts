@@ -8,13 +8,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokemonModule } from '../pokemon/pokemon.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 // Seulement pour le lazy loading --> on déclare les routes directement ici, et on ne charge le composant que si on en a besoin
-/*export const appRoutes: Route[] = [
-    {
+export const appRoutes: Route[] = [
+    /*{
       path : 'pokemons',
+
+      // Seulement pour le lazy loading --> on déclare les routes directement ici, et on ne charge le composant que si on en a besoin
       loadChildren: () => import('../pokemon/pokemon.module').then(m => m.PokemonModule),
-    }
-];*/
+    }*/
+    { path: '', redirectTo: 'pokemons', pathMatch: 'full' },
+    { path: '**', component: PageNotFoundComponent }
+];
 
 export const publicRoutes : string[] = [
     '/login',
@@ -23,14 +29,15 @@ export const publicRoutes : string[] = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot([]),
+    RouterModule.forRoot(appRoutes),
     PokemonModule
   ],
   bootstrap : [
