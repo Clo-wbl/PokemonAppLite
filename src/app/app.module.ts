@@ -37,8 +37,8 @@ export const publicRoutes : string[] = [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    PokemonModule,
     RouterModule.forRoot(appRoutes),
-    PokemonModule
   ],
   bootstrap : [
     AppComponent
