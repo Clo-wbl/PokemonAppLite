@@ -1,25 +1,25 @@
-<div class="container">
-  <h1 class="text-4xl font-extrabold text-red-600 underline">
-    Hello Tailwind!
-  </h1>
-  
-    <div class="row">
-        <div *ngFor="let pokemon of pokemonList" class="col-md-4 col-sm-6">
-            <mat-card (click)="goToPokemon(pokemon)" class="bg-gray-100 shadow-md rounded-lg">
-                <mat-card-header>
-                  <div class="card-image">
-                    <img [src]="pokemon.picture" height="200px" alt="{{pokemon.name}}">
-                  </div>
-                  <mat-card-title>{{pokemon.name}}</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                  <p>ID : {{pokemon.id}}</p>
-                  <p>HP : {{pokemon.hp}}</p>
-                  <p>CP : {{pokemon.cp}}</p>
-                  <p>Types : {{pokemon.types}}</p>
-                  <p>Créé : {{pokemon.created | date:"dd/MM/YYYY"}}</p>
-                </mat-card-content>
-              </mat-card>
-        </div>
-    </div>
+<h1 class="text-4xl font-extrabold text-red-600 underline">
+  Hello Tailwind!
+</h1>
+
+<div class="container mx-auto">
+  <div class="row">
+      <div *ngFor="let pokemon of pokemonList" class="col-md-4 col-sm-6">
+          <mat-card (click)="goToPokemon(pokemon)" class="bg-red-500 shadow-md rounded-lg ">
+              <mat-card-header>
+                <div class="card-image">
+                  <img [src]="pokemon.picture" height="200px" alt="{{pokemon.name}}">
+                </div>
+                <mat-card-title>{{pokemon.name}}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p>ID : {{pokemon.id}}</p>
+                <p>HP : {{pokemon.hp}}</p>
+                <p>CP : {{pokemon.cp}}</p>
+                <p>Types : {{pokemon.types}}</p>
+                <p>Créé : {{pokemon.created | date:"dd/MM/YYYY"}}</p>
+              </mat-card-content>
+            </mat-card>
+      </div>
+  </div>
 </div>
