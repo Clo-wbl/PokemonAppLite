@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-pokemon-form',
   templateUrl: './pokemon-form.component.html',
+  styleUrls: ['./pokemon-form.component.css']
 })
 export class PokemonFormComponent implements OnInit {
 
@@ -33,9 +34,8 @@ export class PokemonFormComponent implements OnInit {
    * @param type 
    * @returns 
    */
-  selectType(event: boolean, type: string) {
-    const isChecked: boolean = event;
-
+  selectType($event: Event, type: string) {
+    const isChecked: boolean = ($event.target as HTMLInputElement).checked;
     if (isChecked) {
       this.pokemon?.types?.push(type);
     } else {
