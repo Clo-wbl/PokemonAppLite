@@ -1,6 +1,8 @@
 # Hello
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+## Description
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2. It follows the Udemy tutorial and builds a PokemonApp (Lite, because we don't have an ExpressServer (please refer to PokemonApp))
 
 ## Development server
 
