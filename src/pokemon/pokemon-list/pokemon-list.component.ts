@@ -7,7 +7,7 @@ import { PokemonService } from '../pokemon.service';
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
 })
-export class PokemonListComponent {
+export class PokemonListComponent implements OnInit {
 
   pokemonList: Pokemon[] = [];
 

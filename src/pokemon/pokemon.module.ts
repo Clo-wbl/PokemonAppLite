@@ -15,6 +15,8 @@ import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
 //Services
 import { PokemonService } from './pokemon.service';
+import { FormsModule } from '@angular/forms';
+import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 
 
 
@@ -23,9 +25,11 @@ import { PokemonService } from './pokemon.service';
     PokemonListComponent,
     PokemonDetailsComponent,
     PokemonTypeColorPipe,
+    PokemonFormComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     PokemonRoutingModule,
     MatCardModule,
   ],

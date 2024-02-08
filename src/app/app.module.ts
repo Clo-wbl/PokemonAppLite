@@ -9,6 +9,7 @@ import { PokemonModule } from '../pokemon/pokemon.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormsModule } from '@angular/forms';
 
 // Seulement pour le lazy loading --> on déclare les routes directement ici, et on ne charge le composant que si on en a besoin
 export const appRoutes: Route[] = [
@@ -37,6 +38,7 @@ export const publicRoutes : string[] = [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     PokemonModule,
     RouterModule.forRoot(appRoutes),
   ],
