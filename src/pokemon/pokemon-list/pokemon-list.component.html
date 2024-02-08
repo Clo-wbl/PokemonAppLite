@@ -1,23 +1,24 @@
 <div class="container">
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
     <div class="row">
-        <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
-            <div (click)="goToPokemon(pokemon)" class="card horizontal">
-                <div class="card-image">
-                    <img [src]="pokemon.picture">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <span class="card-title">{{pokemon?.name}}</span>
-                        <p>{{pokemon?.id}}</p>
-                        <p>{{pokemon?.hp}}</p>
-                        <p>{{pokemon?.cp}}</p>
-                        <p>{{pokemon?.types}}</p>
-                        <p>{{pokemon?.created | date:"dd/MM/YYYY"}}</p>
-                        <span *ngFor="let type of pokemon?.types" class="{{type}}">
-                        </span>
-                    </div>
-                </div>
-            </div>        
+        <div *ngFor="let pokemon of pokemonList" class="col-md-4 col-sm-6">
+            <mat-card (click)="goToPokemon(pokemon)" class="bg-gray-100 shadow-md rounded-lg">
+                <mat-card-header>
+                  <div class="card-image">
+                    <img [src]="pokemon.picture" height="200px" alt="{{pokemon.name}}">
+                  </div>
+                  <mat-card-title>{{pokemon.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>ID : {{pokemon.id}}</p>
+                  <p>HP : {{pokemon.hp}}</p>
+                  <p>CP : {{pokemon.cp}}</p>
+                  <p>Types : {{pokemon.types}}</p>
+                  <p>Créé : {{pokemon.created | date:"dd/MM/YYYY"}}</p>
+                </mat-card-content>
+              </mat-card>
         </div>
     </div>
 </div>

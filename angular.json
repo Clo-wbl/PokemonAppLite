@@ -31,7 +31,10 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/tailwindcss/dist/base.css",
+              "./node_modules/tailwindcss/dist/components.css",
+              "./node_modules/tailwindcss/dist/utilities.css"
             ],
             "scripts": []
           },
