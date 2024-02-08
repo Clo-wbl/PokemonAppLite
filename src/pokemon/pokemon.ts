@@ -1,9 +1,9 @@
 export class Pokemon {
-    id?: number;
-    hp?: number;
-    cp?: number;
-    name?: string;
-    picture?: string;
-    types?: Array<string>;
-    created?: Date;
+    id: number | undefined;
+    hp: number | undefined;
+    cp: number | undefined;
+    name: string | undefined;
+    picture: string | undefined;
+    types: Array<string> | undefined;
+    created: Date | undefined;
 }
