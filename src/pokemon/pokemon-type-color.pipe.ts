@@ -6,48 +6,48 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class PokemonTypeColorPipe implements PipeTransform {
 
   transform(type: string): string {
-    let color: string;
+    let bckgnd: string;
   
     switch (type) {
       case 'Feu':
-        color = 'red lighten-1';
+        bckgnd = 'bg-red-500';
         break;
       case 'Eau':
-        color = 'blue lighten-1';
+        bckgnd = 'bg-blue-500';
         break;
       case 'Plante':
-        color = 'green lighten-1';
+        bckgnd = 'bg-green-500';
         break;
       case 'Insecte':
-        color = 'brown lighten-1';
+        bckgnd = 'bg-brown-500';
         break;
       case 'Normal':
-        color = 'grey lighten-3';
+        bckgnd = 'bg-gray-300';
         break;
       case 'Vol':
-        color = 'blue lighten-3';
+        bckgnd = 'bg-blue-300';
         break;
       case 'Poison':
-        color = 'deep-purple accent-1';
+        bckgnd = 'bg-purple-100';
         break;
       case 'Fée':
-        color = 'pink lighten-4';
+        bckgnd = 'bg-pink-100';
         break;
       case 'Psy':
-        color = 'deep-purple darken-2';
+        bckgnd = 'bg-purple-900';
         break;
       case 'Electrik':
-        color = 'lime accent-1';
+        bckgnd = 'bg-lime-200';
         break;
       case 'Combat':
-        color = 'deep-orange';
+        bckgnd = 'bg-orange-500';
         break;
       default:
-        color = 'grey';
+        bckgnd = 'bg-gray-500';
         break;
     }
   
-    return 'chip ' + color;
+    return `inline-flex items-center rounded-md ${bckgnd} px-2 py-1 text-xs font-medium text-white-600 ring-1 ring-inset ring-gray-500/10 mr-2`; // Add 'text-white' class to make text white for better contrast
   }
 
 }

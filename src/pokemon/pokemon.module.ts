@@ -20,7 +20,7 @@ import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
   declarations: [
     PokemonListComponent,
     PokemonDetailsComponent,
-    PokemonTypeColorPipe
+    PokemonTypeColorPipe,
   ],
   imports: [
     CommonModule,

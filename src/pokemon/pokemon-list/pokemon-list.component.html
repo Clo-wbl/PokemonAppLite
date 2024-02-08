@@ -5,9 +5,9 @@
 <div class="container mx-auto">
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <div *ngFor="let pokemon of pokemonList" class="col-md-4 col-sm-6">
-          <mat-card (click)="goToPokemon(pokemon)" class="bg-white shadow-md rounded-lg">
+          <mat-card (click)="goToPokemon(pokemon)" class="bg-white shadow-md rounded-lg ">
               <mat-card-header class="mx-auto">
-                <mat-card-title class="w-full">{{pokemon.name}}</mat-card-title>
+                <mat-card-title class="w-full ">{{pokemon.name}}</mat-card-title>
                 <div class="card-image">
                   <img [src]="pokemon.picture" height="200px" alt="{{pokemon.name}}">
                 </div>
@@ -23,4 +23,3 @@
       </div>
   </div>
 </div>
-
