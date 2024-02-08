@@ -5,6 +5,8 @@ import { PokemonRoutingModule } from './pokemon-routing.module';
 
 //Material
 import { MatCardModule } from '@angular/material/card'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 //Components
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
@@ -32,6 +34,8 @@ import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
     FormsModule,
     PokemonRoutingModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
   ],
   providers: [PokemonService]
 })

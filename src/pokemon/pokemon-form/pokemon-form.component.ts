@@ -33,8 +33,8 @@ export class PokemonFormComponent implements OnInit {
    * @param type 
    * @returns 
    */
-  selectType($event: Event, type: string) {
-    const isChecked: boolean = ($event.target as HTMLInputElement).checked;
+  selectType(event: boolean, type: string) {
+    const isChecked: boolean = event;
 
     if (isChecked) {
       this.pokemon?.types?.push(type);
