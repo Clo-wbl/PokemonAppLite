@@ -16,7 +16,7 @@
                 <p>ID : {{pokemon.id}}</p>
                 <p>HP : {{pokemon.hp}}</p>
                 <p>CP : {{pokemon.cp}}</p>
-                <p>Types : {{pokemon.types}}</p>
+                <span *ngFor="let type of pokemon.types" class="{{ type | pokemonTypeColor }}">{{ type }}</span>
                 <p>Créé : {{pokemon.created | date:"dd/MM/YYYY"}}</p>
               </mat-card-content>
             </mat-card>
