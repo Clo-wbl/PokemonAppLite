@@ -4,7 +4,7 @@ import { Pokemon } from '../pokemon';
 @Component({
   selector: 'app-add-pokemon',
   template: `
-    <h2 class="center">Ajouter un pokémon</h2>
+    <div class="flex justify-center font-sans text-xl" style="font-family:'Apple Color Emoji'">Ajouter un pokémon</div>
     <app-pokemon-form [pokemon]="pokemon"></app-pokemon-form>
   `,
 })
