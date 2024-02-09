@@ -1,11 +1,9 @@
-<div>
-    <mat-form-field class="example-form-field">
+<div class="flex flex-col items-center">
+    <mat-form-field class="example-form-field w-96">
         <mat-label>Chercher un Pokemon</mat-label>
         <input #searchBox matInput (keyup)="search(searchBox.value)" />
     </mat-form-field>
-</div>
-<div>
-    <mat-nav-list>
+    <mat-nav-list class="w-96">
         <a mat-list-item *ngFor="let pokemon of pokemons$ | async" (click)="goToDetail(pokemon)">
             {{ pokemon.name }}
         </a>
