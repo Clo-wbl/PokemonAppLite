@@ -11,6 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 
 
 //Components
@@ -19,6 +21,7 @@ import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.compo
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 import { AddPokemonComponent } from './add-pokemon/add-pokemon.component';
+import { SearchPokemonComponent } from './search-pokemon/search-pokemon.component';
 
 //Pipes
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
@@ -35,6 +38,7 @@ import { PokemonService } from './pokemon.service';
     PokemonFormComponent,
     EditPokemonComponent,
     AddPokemonComponent,
+    SearchPokemonComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +49,9 @@ import { PokemonService } from './pokemon.service';
     MatCheckboxModule,
     MatIconModule,
     RouterModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatListModule
   ],
   providers: [PokemonService]
 })
