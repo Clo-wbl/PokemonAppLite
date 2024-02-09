@@ -1,13 +1,17 @@
 //Modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { PokemonRoutingModule } from './pokemon-routing.module';
 import { FormsModule } from '@angular/forms';
 
 //Material
-import { MatCardModule } from '@angular/material/card'; 
+import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+
 
 //Components
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
@@ -23,7 +27,6 @@ import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 import { PokemonService } from './pokemon.service';
 
 
-
 @NgModule({
   declarations: [
     PokemonListComponent,
@@ -31,7 +34,7 @@ import { PokemonService } from './pokemon.service';
     PokemonTypeColorPipe,
     PokemonFormComponent,
     EditPokemonComponent,
-    AddPokemonComponent
+    AddPokemonComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +43,9 @@ import { PokemonService } from './pokemon.service';
     MatCardModule,
     MatFormFieldModule,
     MatCheckboxModule,
+    MatIconModule,
+    RouterModule,
+    MatButtonModule
   ],
   providers: [PokemonService]
 })
