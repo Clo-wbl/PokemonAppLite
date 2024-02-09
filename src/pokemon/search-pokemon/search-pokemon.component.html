@@ -1,23 +1,4 @@
-<!-- <div>
-    <mat-form-field class="example-form-field">
-        <mat-label>Chercher un Pokemon</mat-label>
-        <input matInput type="text" [(ngModel)]="inputText" (ngModelChange)="search(inputText)">
-        @if (inputText) {
-        <button matSuffix mat-icon-button aria-label="Clear" (click)="inputText=''">
-            <mat-icon>close</mat-icon>
-        </button>
-        }
-    </mat-form-field>
-</div>
 <div>
-    <mat-list role="list"  *ngFor="let pokemon of pokemons$ | async">
-        <mat-list-item role="listitem" (click)="goToDetail(pokemon)">{{pokemon.name}}</mat-list-item>
-    </mat-list>
-</div> -->
-
-
-
-<!-- <div>
     <mat-form-field class="example-form-field">
         <mat-label>Chercher un Pokemon</mat-label>
         <input #searchBox matInput (keyup)="search(searchBox.value)" />
@@ -29,30 +10,4 @@
             {{ pokemon.name }}
         </a>
     </mat-nav-list>
-</div> -->
-
-
-<div class="row">
-    <div class="col s12 m6 offset-m3">
-        <div class="card">
-            <div class="card-content">
-                <div class="input-field">
-                    <input 
-                        #searchBox 
-                        (keyup)="search(searchBox.value)" 
-                        placeholder="Rechercher un pokémon"
-                    />
-                    <div class="collection">
-                        <a 
-                            *ngFor="let pokemon of pokemons$ | async"
-                            (click)="goToDetail(pokemon)"
-                            class="collection-item"
-                        >
-                            {{ pokemon.name }}
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
