@@ -11,13 +11,14 @@ import { Router } from '@angular/router';
 export class PokemonFormComponent implements OnInit {
 
   @Input() pokemon?: Pokemon;
-
   types: string[] = [];
+  isAddForm: boolean = false;
 
   constructor(private pokemonService: PokemonService, private router: Router) { }
 
   ngOnInit(): void {
     this.types = this.pokemonService.getPokemonTypeList();
+    this.isAddForm = this.router.url.includes('add');
   }
 
   hasType(type: string): boolean {
@@ -53,11 +54,11 @@ export class PokemonFormComponent implements OnInit {
       if (this.pokemon.types) {
 
         // Si le pokemon n'a qu'un seul type et qu'on intéragit avec, on veut pas qu'il soit enlevé
-        if (this.pokemon.types.length == 1 && this.hasType(type)) { 
+        if (this.pokemon.types.length == 1 && this.hasType(type)) {
           return false;
-          
-        // Si le pokemon a déjà 3 types et qu'il intéragit avec un 4ème différent, on veut pas qu'il ait trois types
-        } else if (this.pokemon.types.length > 2 && !this.hasType(type)) { 
+
+          // Si le pokemon a déjà 3 types et qu'il intéragit avec un 4ème différent, on veut pas qu'il ait trois types
+        } else if (this.pokemon.types.length > 2 && !this.hasType(type)) {
           return false;
         }
 
@@ -68,10 +69,20 @@ export class PokemonFormComponent implements OnInit {
 
   onSubmit() {
     if (this.pokemon) {
-      this.pokemonService.updatePokemon(this.pokemon)
-      .subscribe(() => {
-        if(this.pokemon) this.router.navigate(['/pokemon', this.pokemon.id])
-      })
+
+      if (this.isAddForm) {
+        this.pokemonService.addPokemon(this.pokemon)
+          .subscribe((pokemon: Pokemon) => this.router.navigate(['/pokemon', pokemon.id]));
+
+      } else {
+
+        this.pokemonService.updatePokemon(this.pokemon)
+          .subscribe(() => {
+            if (this.pokemon) this.router.navigate(['/pokemon', this.pokemon.id])
+          })
+
+      }
+
     }
   }
 

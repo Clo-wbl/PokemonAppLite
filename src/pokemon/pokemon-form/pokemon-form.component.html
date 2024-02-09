@@ -16,6 +16,20 @@
             Le nom du pokémon est requis (1-25).
           </p>
         </div>
+
+        <!-- Pokemon picture -->
+        <div *ngIf="isAddForm" class="mb-6">
+          <label for="name" class="block mb-2 font-bold">Nom</label>
+          <input type="text" id="name"
+                 required
+                 pattern="^[a-zA-Z0-9àéèç]{1,25}$"
+                 [(ngModel)]="pokemon.picture" name="picture"
+                 #picture="ngModel"
+                 class="form-input rounded-md border-gray-300">
+          <p class="text-red-500 text-sm mt-1" *ngIf="picture.invalid && !picture.pristine">
+            L'image du ポケモン est requise.
+          </p>
+        </div>
   
         <!-- Pokemon hp -->
         <div class="mb-6">
