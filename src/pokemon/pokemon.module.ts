@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 //Components
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
@@ -22,6 +22,7 @@ import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 import { AddPokemonComponent } from './add-pokemon/add-pokemon.component';
 import { SearchPokemonComponent } from './search-pokemon/search-pokemon.component';
+import { LoaderComponent } from './loader/loader.component';
 
 //Pipes
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
@@ -38,7 +39,8 @@ import { PokemonService } from './pokemon.service';
     PokemonFormComponent,
     EditPokemonComponent,
     AddPokemonComponent,
-    SearchPokemonComponent
+    SearchPokemonComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -51,7 +53,8 @@ import { PokemonService } from './pokemon.service';
     RouterModule,
     MatButtonModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    MatProgressSpinnerModule
   ],
   providers: [PokemonService]
 })
