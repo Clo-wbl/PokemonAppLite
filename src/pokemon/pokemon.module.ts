@@ -14,6 +14,7 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
+import { AddPokemonComponent } from './add-pokemon/add-pokemon.component';
 
 //Pipes
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
@@ -29,7 +30,8 @@ import { PokemonService } from './pokemon.service';
     PokemonDetailsComponent,
     PokemonTypeColorPipe,
     PokemonFormComponent,
-    EditPokemonComponent
+    EditPokemonComponent,
+    AddPokemonComponent
   ],
   imports: [
     CommonModule,
