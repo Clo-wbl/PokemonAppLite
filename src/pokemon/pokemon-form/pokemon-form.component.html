@@ -11,7 +11,7 @@
                  pattern="^[a-zA-Z0-9àéèç]{1,25}$"
                  [(ngModel)]="pokemon.name" name="name"
                  #name="ngModel"
-                 class="form-input rounded-md border-gray-300">
+                 class="form-input rounded-md border-gray-300 w-full">
           <p class="text-red-500 text-sm mt-1" *ngIf="name.invalid && !name.pristine">
             Le nom du pokémon est requis (1-25).
           </p>
@@ -25,8 +25,8 @@
                  pattern="^[a-zA-Z0-9àéèç]{1,25}$"
                  [(ngModel)]="pokemon.picture" name="picture"
                  #picture="ngModel"
-                 class="form-input rounded-md border-gray-300">
-          <p class="text-red-500 text-sm mt-1" *ngIf="picture.invalid && !picture.pristine">
+                 class="form-input rounded-md border-gray-300 w-full">
+          <p class="text-red-500 text-sm mt-1" *ngIf="!picture.pristine">
             L'image du ポケモン est requise.
           </p>
         </div>
