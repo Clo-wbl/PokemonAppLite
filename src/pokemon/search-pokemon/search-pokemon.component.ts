@@ -3,10 +3,24 @@ import { Router } from '@angular/router'
 import { Pokemon } from '../pokemon';
 import { Observable, Subject, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 import { PokemonService } from '../pokemon.service';
+import { NgFor, AsyncPipe } from '@angular/common';
+import { MatNavList, MatListItem } from '@angular/material/list';
+import { MatInput } from '@angular/material/input';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
 
 @Component({
-  selector: 'app-search-pokemon',
-  templateUrl: './search-pokemon.component.html',
+    selector: 'app-search-pokemon',
+    templateUrl: './search-pokemon.component.html',
+    standalone: true,
+    imports: [
+        MatFormField,
+        MatLabel,
+        MatInput,
+        MatNavList,
+        NgFor,
+        MatListItem,
+        AsyncPipe,
+    ],
 })
 export class SearchPokemonComponent implements OnInit{
 

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-page-not-found',
-  template: `
+    selector: 'app-page-not-found',
+    template: `
     <div class='center'>
       <img src="https://imagetolink.com/ib/YSlw2AJZoP.jpg" style="height: 300px;"/>
       <h1>Hey, cette page n'existe pas !</h1>
@@ -11,7 +12,9 @@ import { Component } from '@angular/core';
       </a>
     </div>
   `,
-  styles: ``
+    styles: ``,
+    standalone: true,
+    imports: [RouterLink]
 })
 export class PageNotFoundComponent {
 

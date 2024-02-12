@@ -2,11 +2,16 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PokemonService } from '../pokemon.service';
 import { Pokemon } from '../pokemon'
 import { Router } from '@angular/router';
+import { LoaderComponent } from '../loader/loader.component';
+import { FormsModule } from '@angular/forms';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-pokemon-form',
-  templateUrl: './pokemon-form.component.html',
-  styleUrls: ['./pokemon-form.component.css']
+    selector: 'app-pokemon-form',
+    templateUrl: './pokemon-form.component.html',
+    styleUrls: ['./pokemon-form.component.css'],
+    standalone: true,
+    imports: [NgIf, FormsModule, NgFor, LoaderComponent]
 })
 export class PokemonFormComponent implements OnInit {
 
