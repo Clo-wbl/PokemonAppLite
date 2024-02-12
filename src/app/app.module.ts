@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 // Seulement pour le lazy loading --> on déclare les routes directement ici, et on ne charge le composant que si on en a besoin
 export const appRoutes: Route[] = [
@@ -51,7 +52,8 @@ export const appRoutes: Route[] = [
     PokemonModule,
     RouterModule.forRoot(appRoutes),
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   bootstrap: [
     AppComponent
